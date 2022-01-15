@@ -1,2 +1,2 @@
-# Robot2022
-The code for the robot in the 2022 season
+# 2020RobotJava
+2020 Robot code translated to java with 2021 frc modules
