@@ -1,15 +1,14 @@
-'''Need:
-Field draw with scaler
-Main loop with movement input drawn (no rotation used)
-'''
+//Need:
+//Field draw with scaler
+//Main loop with movement input drawn
 
-import turtle
+public class draw {
 
-def drawField(self):
-	#draw the field here, dont forget the scaler everywhere
+	public static void main(String[] args) {
 
-def calculatePosition(self, x, y):
-	#given movement calculation information, calculate the new position
+		Turtle bob = new Turtle();
 
-def drawBot(self, pos, rot):
-	#given position and rotation, draw it
+		bob.setDirection(120);
+		bob.forward(200);
+	}
+}
