@@ -1,14 +1,21 @@
-//Need:
-//Field draw with scaler
-//Main loop with movement input drawn
+public class Draw {
 
-public class draw {
+    public Draw() {
+        Turtle bob = new Turtle();
+    }
 
-	public static void main(String[] args) {
+    public void drawField() {
+        //Draw field
+    }
 
-		Turtle bob = new Turtle();
+    //Top left angle, top right angle, bottom left angle, bottom right angle, top left speed, top right speed, bottom left speed, bottom right speed
+    public void calculatePosition(topLAngle, topRAngle, bottomLAngle, bottomRAngle, topLSpeed, topRSpeed, bottomLSpeed, bottomRSpeed) {
+        //Given wheel direction and speed, calculate new position and rotation
+    }
 
-		bob.setDirection(120);
-		bob.forward(200);
-	}
+    public void drawPositionRotation(x, y, rot) {
+        //Given new position and rotation, draw it
+    }
+
+
 }
