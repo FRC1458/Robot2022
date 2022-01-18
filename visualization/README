@@ -1,0 +1,4 @@
+This folder is the visualization code for this 2022 bot.
+
+It uses the Java version of turtle, which is encased entirely in Turtle.java.
+Definitely nowhere near done yet and will be on hold until the code for swerve is done.
