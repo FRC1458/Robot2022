@@ -56,11 +56,26 @@ public class Robot extends TimedRobot {
   public void teleopPeriodic() {
     switch(state) {
       case MANUAL:
-        manual_control();
+        manualControl();
+      case AUTONOMOUS:
+        autonomousInit();
+        autonomousPeriodic();
+      case DETECT_BALL:
+        detectBall();
     }
   }
 
-  manual_control() {
+  public void manualControl() {
 
+  }
+
+  @Override
+  public void autonomousInit() {
+
+  }
+
+  @Override
+  public void autonomousPeriodic() {
+    
   }
 }
