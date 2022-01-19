@@ -57,16 +57,50 @@ public class Robot extends TimedRobot {
     switch(state) {
       case MANUAL:
         manualControl();
+
       case AUTONOMOUS:
         autonomousInit();
         autonomousPeriodic();
+
       case DETECT_BALL:
         detectBall();
+
+      case MOVE_TO_BALL:
+        moveToBall();
+
+      case PICK_UP_BALL:
+        pickUpBall();
+
+      case AIM:
+        aim();
+
+      case SHOOT:
+        shoot();
     }
   }
 
   public void manualControl() {
 
+  }
+
+  public void detectBall() {
+
+  }
+
+  public void moveToBall() {
+
+  }
+
+  public void pickUpBall() {
+
+  }
+
+  public void aim() {
+
+  }
+
+  public void shoot() {
+    
   }
 
   @Override
