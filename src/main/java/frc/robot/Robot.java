@@ -4,6 +4,8 @@
 
 package frc.robot;
 
+import javax.net.ssl.CertPathTrustManagerParameters;
+
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.TalonFX;
@@ -15,6 +17,8 @@ import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 //import edu.wpi.first.wpilibj.Ultrasonic;
 
+
+//class Camera;
 /**
  * The VM is configured to automatically run this class, and to call the
  * functions corresponding to each mode, as described in the TimedRobot
@@ -35,10 +39,15 @@ public class Robot extends TimedRobot {
   }
 
   States state;
-
+  Camera topCam;
+  Camera bottomCam;
+  Ball redBall;
+  Ball blueBall;
+  
   public Robot() {
     super(0.03);
     //create variables
+    topCam = new Camera();
   }
 
   @Override
@@ -124,28 +133,28 @@ public class Robot extends TimedRobot {
     }
   }
   public void findBall(){
+    
+  }
+  public boolean reachedBall(){
+    
+  }
+  public boolean ballPickedUp(){
 
   }
-  public void reachedBall(){
+  public boolean reachedHub(){
 
   }
-  public void ballPickedUp(){
-
-  }
-  public void reachedHub(){
-
-  }
-  public void ballDropped(){
+  public boolean ballDropped(){
 
   }
   
   @Override
-  public void autonomousInit() {
+  public boolean autonomousInit() {
 
   }
 
   @Override
-  public void autonomousPeriodic() {
+  public boolean autonomousPeriodic() {
     
   }
 }
