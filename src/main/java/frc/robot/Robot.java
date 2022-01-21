@@ -43,6 +43,7 @@ public class Robot extends TimedRobot {
   Camera bottomCam;
   Ball redBall;
   Ball blueBall;
+  Movement swerveDrive;
   
   public Robot() {
     super(0.03);
@@ -136,7 +137,15 @@ public class Robot extends TimedRobot {
   public boolean findBall(){
     count += 1;
     int turn = top_cam.is_ball_present();
-    if (turn == 0)
+    if (turn == 0) {
+      return true;
+    }
+    else if (turn > 0) {
+      swerveDrive.turn_right(0.1);
+    }
+    else {
+      swerveDrive.turn_left(0.1);
+    }
   }
   public boolean reachedBall(){
     
@@ -152,12 +161,12 @@ public class Robot extends TimedRobot {
   }
   
   @Override
-  public boolean autonomousInit() {
+  public void autonomousInit() {
 
   }
 
   @Override
-  public boolean autonomousPeriodic() {
+  public void autonomousPeriodic() {
     
   }
 }
