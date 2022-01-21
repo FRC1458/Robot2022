@@ -44,6 +44,7 @@ public class Robot extends TimedRobot {
   @Override
   public void robotInit() {
     //set to defaults
+    autonomousInit();
 
   }
 
@@ -57,52 +58,87 @@ public class Robot extends TimedRobot {
     switch(state) {
       case MANUAL:
         manualControl();
+        break;
 
       case AUTONOMOUS:
-        autonomousInit();
-        autonomousPeriodic();
-
+        
+        //autonomousPeriodic();
+        state = State.DETECT_BALL;
+        break;
       case DETECT_BALL:
         detectBall();
-
+        break;
       case MOVE_TO_BALL:
         moveToBall();
-
+        break;
       case PICK_UP_BALL:
         pickUpBall();
-
-      case AIM:
-        aim();
-
-      case SHOOT:
-        shoot();
+        break;
+      case GO_TO_HUB:
+        goToHub();
+        break;
+      case DROP_BALL:
+        dropBall();
+        break;
     }
   }
 
   public void manualControl() {
-
+    
   }
 
   public void detectBall() {
 
+    if (findBall()) {
+      state = State.MOVE_TO_BALL;
+    }
   }
 
   public void moveToBall() {
-
+    if (reachedBall()) {
+      state = State.PICK_UP_BALL;
+    }
+    else {
+      state = State.DETECT_BALL;
+    }
   }
 
   public void pickUpBall() {
-
+    if (ballPickedUp()) {
+      state = State.GO_TO_HUB;
+    }
+    else {
+      state = State.DETECT_BALL;
+    }
   }
 
-  public void aim() {
-
+  public void goToHub() {
+    if (reachedHub()) {
+      state = State.DROP_BALL;
+    }
   }
 
-  public void shoot() {
-    
+  public void dropBall() {
+    if (ballDropped()) {
+      state = State.DETECT_BALL;
+    }
   }
+  public void findBall(){
 
+  }
+  public void reachedBall(){
+
+  }
+  public void ballPickedUp(){
+
+  }
+  public void reachedHub(){
+
+  }
+  public void ballDropped(){
+
+  }
+  
   @Override
   public void autonomousInit() {
 
