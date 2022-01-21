@@ -44,11 +44,23 @@ public class Robot extends TimedRobot {
   Ball redBall;
   Ball blueBall;
   Movement swerveDrive;
+  Movement leftFrontWheel;
+  Movement leftBackWheel;
+  Movement rightFrontWheel;
+  Movement rightBackWheel;
   
   public Robot() {
     super(0.03);
     //create variables
     topCam = new Camera();
+    bottomCam = new Camera();
+    redBall = new Ball();
+    blueBall =  new Ball();
+    swerveDrive  = new Movement();
+    leftFrontWheel = new Movement();
+    leftBackWheel = new Movement();
+    rightBackWheel = new Movement();
+    rightFrontWheel = new Movement();
   }
 
   @Override
