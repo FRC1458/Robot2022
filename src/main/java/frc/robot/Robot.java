@@ -123,8 +123,11 @@ public class Robot extends TimedRobot {
       state = State.DETECT_BALL;
     }
   }
-  public void findBall(){
-
+  int count = 0;
+  public boolean findBall(){
+    count += 1;
+    int turn = top_cam.is_ball_present();
+    if (turn == 0)
   }
   public void reachedBall(){
 
