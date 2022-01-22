@@ -181,7 +181,10 @@ public class Robot extends TimedRobot {
     }
   }
   public boolean ballPickedUp(){
-    int bottomCam.isBallPresent();
+    int pickedUp = bottomCam.isBallPresent();
+  if (pickedUp == 0){
+    return true;
+  }
   }
   public boolean reachedHub(){
 
