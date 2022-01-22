@@ -36,6 +36,7 @@ public class Robot extends TimedRobot {
     PICK_UP_BALL,
     AIM,
     SHOOT,
+    GO_TO_HUMAN;
   }
 
   States state;
@@ -89,6 +90,9 @@ public class Robot extends TimedRobot {
         break;
       case DETECT_BALL:
         detectBall();
+        break;
+      case GO_TO_HUMAN:
+        goToHuman();
         break;
       case MOVE_TO_BALL:
         moveToBall();
@@ -157,6 +161,9 @@ public class Robot extends TimedRobot {
     }
     else {
       swerveDrive.turn_left(0.1);
+    }
+    if (count > 1000) {
+      state = State.
     }
   }
   public boolean reachedBall(){
