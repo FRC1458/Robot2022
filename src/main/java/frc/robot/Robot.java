@@ -2,8 +2,6 @@
 // Open Source Software; you can modify and/or share it under the terms of
 // the WPILib BSD license file in the root directory of this project.
 
-// Test line
-
 package frc.robot;
 
 import javax.net.ssl.CertPathTrustManagerParameters;
@@ -175,30 +173,35 @@ public class Robot extends TimedRobot {
     if (count > 1000) {
       state = State.GO_TO_HUMAN;
     }
+    return false;
   }
   public boolean reachedBall(){
     int distanceToBall;
     if (distanceToBall == 0){
       return true;
     }
+    return false;
   }
   public boolean ballPickedUp(){
     int pickedUp = bottomCam.isBallPresent();
     if (pickedUp == 0){
       return true;
     }
+    return false;
   }
   public boolean reachedHub(){
     int distanceToHub;
     if (distanceToHub == 0) {
       return true;
     }
+    return false; 
   }
   public boolean ballDropped(){
     boolean hasBall;
     if (hasBall == false) {
       return true;
     }
+    return false;
   }
   
   @Override
