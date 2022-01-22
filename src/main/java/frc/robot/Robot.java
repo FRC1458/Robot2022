@@ -175,8 +175,8 @@ public class Robot extends TimedRobot {
     }
   }
   public boolean reachedBall(){
-    int distance;
-    if (distance == 0){
+    int distanceToBall;
+    if (distanceToBall == 0){
       return true;
     }
   }
