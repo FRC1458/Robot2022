@@ -184,7 +184,7 @@ public class Robot extends TimedRobot {
     int pickedUp = bottomCam.isBallPresent();
     if (pickedUp == 0){
       return true;
-  }
+    }
   }
   public boolean reachedHub(){
     int distanceToHub;
@@ -193,7 +193,10 @@ public class Robot extends TimedRobot {
     }
   }
   public boolean ballDropped(){
-
+    boolean hasBall;
+    if (hasBall == false) {
+      return true;
+    }
   }
   
   @Override
