@@ -44,8 +44,8 @@ public class Robot extends TimedRobot {
   States state;
   Camera topCam;
   Camera bottomCam;
-  Ball redBall;
-  Ball blueBall;
+  Camera ballCamera;
+  Ball Ball;
   Movement swerveDrive;
   Movement leftFrontWheel;
   Movement leftBackWheel;
@@ -57,8 +57,7 @@ public class Robot extends TimedRobot {
     //create variables
     topCam = new Camera();
     bottomCam = new Camera();
-    redBall = new Ball();
-    blueBall =  new Ball();
+    Ball = new Ball();
     swerveDrive  = new Movement();
     leftFrontWheel = new Movement();
     leftBackWheel = new Movement();
@@ -169,10 +168,13 @@ public class Robot extends TimedRobot {
     }
   }
   public boolean reachedBall(){
-    
+    int distance;
+    if (distance == 0){
+      return true;
+    }
   }
   public boolean ballPickedUp(){
-
+    int bottomCam.isBallPresent();
   }
   public boolean reachedHub(){
 
