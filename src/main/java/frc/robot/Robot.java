@@ -34,8 +34,8 @@ public class Robot extends TimedRobot {
     DETECT_BALL,
     MOVE_TO_BALL,
     PICK_UP_BALL,
-    AIM,
-    SHOOT,
+    GO_TO_HUB,
+    DROP_BALL,
   }
 
   States state;
