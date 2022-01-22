@@ -120,8 +120,15 @@ public class Robot extends TimedRobot {
     if (findBall()) {
       state = State.MOVE_TO_BALL;
     }
+    else {
+      state = State.GO_TO_HUMAN;
+    }
   }
+  public void goToHuman() {
 
+
+    }
+  }
   public void moveToBall() {
     if (reachedBall()) {
       state = State.PICK_UP_BALL;
@@ -154,7 +161,7 @@ public class Robot extends TimedRobot {
   int count = 0;
   public boolean findBall(){
     count += 1;
-    int turn = top_cam.is_ball_present();
+    int turn = topCam.isBallPresent();
     if (turn == 0) {
       return true;
     }
@@ -165,7 +172,7 @@ public class Robot extends TimedRobot {
       swerveDrive.turn_left(0.1);
     }
     if (count > 1000) {
-      state = State.
+      state = State.GO_TO_HUMAN;
     }
   }
   public boolean reachedBall(){
