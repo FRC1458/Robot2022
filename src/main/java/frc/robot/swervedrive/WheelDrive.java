@@ -6,4 +6,14 @@ public class WheelDrive {
     private CANSparkMax speedMotor;
     private PIDController pidController;
 
+
+private CANSparkMax angleMotor;
+private CANSparkMax speeedMotor;
+private PIDcontroller pidController;
+    public WheelDrive (int angleMotor, int speedMotor, int encoder) {
+        this.angleMotor = new CANSparkMax (angleMotor);
+
+
+
+    }
 }
